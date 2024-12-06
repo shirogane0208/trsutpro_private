@@ -14,13 +14,6 @@ javascript: (
             }
         }
 
-        function date_validation(dateString) {
-            const pattern = /^\d{4}\d{2}\d{2}$/;
-            if (!pattern.test(dateString)) {
-                return false;
-            }
-        }
-
         let first_message = `
             [勤怠入力くん]
             日次の勤怠を10:00 - 17:30で入力するよ
@@ -30,7 +23,8 @@ javascript: (
 
         let date_str = prompt(first_message);
         
-        if (date_validation == false){
+        let pattern = /^\d{8}$/;
+        if (!pattern.test(date_string)) {
             alert('入力が正しくないようです')
             return 'input error'
         }
