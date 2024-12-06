@@ -13,8 +13,8 @@ javascript: (
             alert('停止しました');
             return 'cancel'
         }else if (date_str == ""){
-            alert('日付を入力してください')
-            return 'input date error'
+            alert('日付を入力してください');
+            return 'input date error';
         }
 
         let secound_message = `
