@@ -23,7 +23,7 @@ javascript: (
 
         let date_str = prompt(first_message);
         
-        if (date_validation == False){
+        if (date_validation == false){
             alert('入力が正しくないようです')
             return 'input error'
         }
@@ -69,10 +69,10 @@ javascript: (
         let work_location = document.getElementById('kinmu_area')
         option_false(work_location)
 
-        if (remote_work == True){
+        if (remote_work == true){
             let result_location = work_location.querySelector(`option[value="在宅勤務"]`);
             result_location.selected = true;
-        }else if (remote_work == False){
+        }else if (remote_work == false){
             let result_location = work_location.querySelector(`option[value="通常勤務"]`);
             result_location.selected = true;
         }else{
