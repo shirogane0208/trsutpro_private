@@ -1,5 +1,12 @@
 javascript: (
     function main() {
+
+        function option_false(element){
+            for (const option of element.options) {
+                option.selected = false;
+            }
+        }
+
         let first_message = `
             [勤怠入力くん]
             日次の勤怠を10:00 - 17:30で入力するよ
@@ -35,27 +42,26 @@ javascript: (
 
         let start_hour = document.getElementById("shukkin_time_hour");
         let start_hour_target_option = start_hour.querySelector(`option[value="10"]`);
-        // for (const option of start_hour.options) {
-        //     option.selected = false;
-        // }
+        option_false(start_hour)
         start_hour_target_option.selected = true;
 
         let start_minute = document.getElementById("shukkin_time_min");
         let start_minute_target_option = start_minute.querySelector(`option[value="0"]`);
+        option_false(start_minute)
         start_minute_target_option.selected = true;
 
         let end_hour = document.getElementById("taikin_time_hour");
         let end_hour_target_option = end_hour.querySelector(`option[value="18"]`);
+        option_false(end_hour)
         end_hour_target_option.selected = true;
 
         let end_minute = document.getElementById("taikin_time_min");
         let end_minute_target_option = end_minute.querySelector(`option[value="30"]`);
+        option_false(end_minute)
         end_minute_target_option.selected = true;
 
         let work_location = document.getElementById('kinmu_area')
-        for (const option of work_location.options) {
-            option.selected = false;
-        }
+        option_false(work_location)
 
         if (remote_work == True){
             let result_location = work_location.querySelector(`option[value="在宅勤務"]`);
