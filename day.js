@@ -7,17 +7,46 @@ javascript: (
             format: yyyymmdd
         `;
 
+        let date_str = prompt(first_message);
+
         let secound_message = `
             在宅勤務でしたか？
         `;
 
-        let remote_work = confirm(secound_message)
+        let remote_work = confirm(secound_message);
         
-        let date_str = prompt(first_message);
+
+        let year = date_str.slice(0, 4);
+        let month = date_str.slice(4, 6);
+        let day = date_str.slice(6, 8);
         
-        const year = date_str.slice(0, 4);
-        const month = date_str.slice(4, 6);
-        const day = date_str.slice(6, 8);
-        // date id kinmu_date
+        let day_element = document.getElementById('kinmu_date');
+        day_element.value = (year + '/' + month + '/' + day);
+
+        let start_hour = document.getElementById("shukkin_time_hour");
+        let start_hour_target_option = start_hour.querySelector(`option[value="10"]`);
+        start_hour_target_option.selected = true;
+
+        let start_minute = document.getElementById("shukkin_time_min");
+        let start_minute_target_option = start_minute.querySelector(`option[value="0"]`);
+        start_minute_target_option.selected = true;
+
+        let end_hour = document.getElementById("taikin_time_hour");
+        let end_hour_target_option = end_hour.querySelector(`option[value="18"]`);
+        end_hour_target_option.selected = true;
+
+        let end_minute = document.getElementById("taikin_time_min");
+        let end_minute_target_option = end_minute.querySelector(`option[value="30"]`);
+        end_minute_target_option.selected = true;
+
+        let work_location = document.getElementById('kinmu_area')
+
+        if (remote_work){
+            let result_location = work_location.querySelector(`option[value="在宅勤務"]`);
+            result_location.selected = true;
+        }else{
+            let result_location = work_location.querySelector(`option[value="通常勤務"]`);
+            result_location.selected = true;
+        }
     }
 )();
