@@ -29,7 +29,11 @@ javascript: (
             alert('停止しました')
             return 'cancel'
         }else if (!pattern.test(date_str)) {
-            alert('入力が正しくないようです')
+            alert_message = `
+            入力が正しくないようです
+            input: ${date_str}
+            `
+            alert(alert_message)
             return 'input error'
         }
 
