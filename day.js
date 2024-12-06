@@ -45,9 +45,6 @@ javascript: (
 
         let remote_work = confirm(secound_message);
 
-        console.log(remote_work)
-        
-
         let year = date_str.slice(0, 4);
         let month = date_str.slice(4, 6);
         let day = date_str.slice(6, 8);
