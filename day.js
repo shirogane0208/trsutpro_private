@@ -16,12 +16,10 @@ javascript: (
 
         let date_str = prompt(first_message);
 
-        console.log(date_str)
-
-        if (date_str == false) {
+        if (date_str == null) {
             alert('停止しました');
             return 'cancel'
-        }else if (date_str == ""){
+        }else if (date_str == False){
             alert('日付を入力してください');
             return 'input date error';
         }
@@ -33,6 +31,8 @@ javascript: (
         `;
 
         let remote_work = confirm(secound_message);
+
+        console.log(remote_work)
         
 
         let year = date_str.slice(0, 4);
