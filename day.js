@@ -9,6 +9,11 @@ javascript: (
 
         let date_str = prompt(first_message);
 
+        if (date_str == false) {
+            alert("停止しました");
+            return 'cancel'
+        }
+
         let secound_message = `
             在宅勤務でしたか？
         `;
