@@ -48,12 +48,14 @@ javascript: (
 
         let work_location = document.getElementById('kinmu_area')
 
-        if (remote_work){
+        if (remote_work == True){
             let result_location = work_location.querySelector(`option[value="在宅勤務"]`);
             result_location.selected = true;
-        }else{
+        }else if (remote_work == False){
             let result_location = work_location.querySelector(`option[value="通常勤務"]`);
             result_location.selected = true;
+        }else{
+            return 'internal error'
         }
     }
 )();
