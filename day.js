@@ -35,6 +35,9 @@ javascript: (
 
         let start_hour = document.getElementById("shukkin_time_hour");
         let start_hour_target_option = start_hour.querySelector(`option[value="10"]`);
+        // for (const option of start_hour.options) {
+        //     option.selected = false;
+        // }
         start_hour_target_option.selected = true;
 
         let start_minute = document.getElementById("shukkin_time_min");
@@ -50,6 +53,9 @@ javascript: (
         end_minute_target_option.selected = true;
 
         let work_location = document.getElementById('kinmu_area')
+        for (const option of work_location.options) {
+            option.selected = false;
+        }
 
         if (remote_work == True){
             let result_location = work_location.querySelector(`option[value="在宅勤務"]`);
