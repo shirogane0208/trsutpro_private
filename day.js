@@ -23,13 +23,12 @@ javascript: (
 
         let date_str = prompt(first_message);
         
+        let pattern = /^\d{8}$/;
+        
         if (date_str == null){
             alert('停止しました')
             return 'cancel'
-        }
-
-        let pattern = /^\d{8}$/;
-        if (!pattern.test(date_str)) {
+        }else if (!pattern.test(date_str)) {
             alert('入力が正しくないようです')
             return 'input error'
         }
