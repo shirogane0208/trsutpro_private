@@ -26,7 +26,7 @@ javascript: (
         let pattern = /^\d{8}$/;
 
         if (date_str == null){
-            alert('停止しました')
+            alert('キャンセルしました')
             return 'cancel'
         }else if (!pattern.test(date_str)) {
             alert_message = `
