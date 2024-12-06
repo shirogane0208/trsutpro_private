@@ -16,6 +16,8 @@ javascript: (
 
         let date_str = prompt(first_message);
 
+        console.log(date_str)
+        
         if (date_str == false) {
             alert('停止しました');
             return 'cancel'
