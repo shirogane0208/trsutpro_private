@@ -3,7 +3,7 @@ javascript: (
 
         function input_value(id_name,value_name){
             let element = document.getElementById(id_name);
-            let element_target_option = start_hour.querySelector(`option[value=${value_name}]`);
+            let element_target_option = element.querySelector(`option[value="${value_name}"]`);
             option_false(element)
             element_target_option.selected = true;
         }
