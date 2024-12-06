@@ -7,6 +7,13 @@ javascript: (
             }
         }
 
+        function date_validation(dateString) {
+            const pattern = /^\d{4}\d{2}\d{2}$/;
+            if (!pattern.test(dateString)) {
+                return false;
+            }
+        }
+
         let first_message = `
             [勤怠入力くん]
             日次の勤怠を10:00 - 17:30で入力するよ
@@ -15,13 +22,10 @@ javascript: (
         `;
 
         let date_str = prompt(first_message);
-
-        if (date_str == null) {
-            alert('停止しました');
-            return 'cancel'
-        }else if (date_str == False){
-            alert('日付を入力してください');
-            return 'input date error';
+        
+        if (date_validation == False){
+            alert('入力が正しくないようです')
+            return 'input error'
         }
 
         let secound_message = `
