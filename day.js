@@ -13,7 +13,7 @@ javascript: (
 
         let remote_work = confirm(secound_message)
         
-        let date_str = promtp(first_message);
+        let date_str = prompt(first_message);
         
         const year = date_str.slice(0, 4);
         const month = date_str.slice(4, 6);
