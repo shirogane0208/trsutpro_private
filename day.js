@@ -16,6 +16,8 @@ javascript: (
 
         let secound_message = `
             在宅勤務でしたか？
+            ok: はい
+            キャンセル: いいえ
         `;
 
         let remote_work = confirm(secound_message);
