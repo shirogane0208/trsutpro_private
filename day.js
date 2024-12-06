@@ -10,8 +10,11 @@ javascript: (
         let date_str = prompt(first_message);
 
         if (date_str == false) {
-            alert("停止しました");
+            alert('停止しました');
             return 'cancel'
+        }else if (date_str == ""){
+            alert('日付を入力してください')
+            return 'input date error'
         }
 
         let secound_message = `
@@ -55,6 +58,7 @@ javascript: (
             let result_location = work_location.querySelector(`option[value="通常勤務"]`);
             result_location.selected = true;
         }else{
+            alert('internal error')
             return 'internal error'
         }
     }
