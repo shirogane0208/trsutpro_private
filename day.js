@@ -1,6 +1,13 @@
 javascript: (
     function main() {
 
+        function input_value(id_name,value_name){
+            let element = document.getElementById(id_name);
+            let element_target_option = start_hour.querySelector(`option[value="${value_name}"]`);
+            option_false(element)
+            element_target_option.selected = true;
+        }
+
         function option_false(element){
             for (const option of element.options) {
                 option.selected = false;
@@ -46,25 +53,10 @@ javascript: (
         let day_element = document.getElementById('kinmu_date');
         day_element.value = (year + '/' + month + '/' + day);
 
-        let start_hour = document.getElementById("shukkin_time_hour");
-        let start_hour_target_option = start_hour.querySelector(`option[value="10"]`);
-        option_false(start_hour)
-        start_hour_target_option.selected = true;
-
-        let start_minute = document.getElementById("shukkin_time_min");
-        let start_minute_target_option = start_minute.querySelector(`option[value="0"]`);
-        option_false(start_minute)
-        start_minute_target_option.selected = true;
-
-        let end_hour = document.getElementById("taikin_time_hour");
-        let end_hour_target_option = end_hour.querySelector(`option[value="18"]`);
-        option_false(end_hour)
-        end_hour_target_option.selected = true;
-
-        let end_minute = document.getElementById("taikin_time_min");
-        let end_minute_target_option = end_minute.querySelector(`option[value="30"]`);
-        option_false(end_minute)
-        end_minute_target_option.selected = true;
+        input_value("shukkin_time_hour","10");
+        input_value("shukkin_time_min","0");
+        input_value("taikin_time_hour","18");
+        input_value("taikin_time_min","30");
 
         let work_location = document.getElementById('kinmu_area')
         option_false(work_location)
